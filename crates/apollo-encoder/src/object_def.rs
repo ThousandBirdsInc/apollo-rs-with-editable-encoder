@@ -54,16 +54,16 @@ use crate::{Directive, FieldDefinition, StringValue};
 #[derive(Debug, Clone)]
 pub struct ObjectDefinition {
     // Name must return a String.
-    name: String,
+    pub name: String,
     // Description may return a String or null.
-    description: Option<StringValue>,
+    pub description: Option<StringValue>,
     // The vector of interfaces that an object implements.
-    interfaces: Vec<String>,
+    pub interfaces: Vec<String>,
     // The vector of fields query‐able on this type.
-    fields: Vec<FieldDefinition>,
+    pub fields: Vec<FieldDefinition>,
     /// The vector of directives for this object
-    directives: Vec<Directive>,
-    extend: bool,
+    pub directives: Vec<Directive>,
+    pub extend: bool,
 }
 
 impl ObjectDefinition {
