@@ -75,18 +75,18 @@ use crate::{
 /// ```
 #[derive(Debug, Clone, Default)]
 pub struct Document {
-    operation_definitions: Vec<OperationDefinition>,
-    fragment_definitions: Vec<FragmentDefinition>,
-    schema_definitions: Vec<SchemaDefinition>,
+    pub operation_definitions: Vec<OperationDefinition>,
+    pub fragment_definitions: Vec<FragmentDefinition>,
+    pub schema_definitions: Vec<SchemaDefinition>,
     // Type definitions
-    scalar_type_definitions: Vec<ScalarDefinition>,
-    object_type_definitions: Vec<ObjectDefinition>,
-    interface_type_definitions: Vec<InterfaceDefinition>,
-    union_type_definitions: Vec<UnionDefinition>,
-    enum_type_definitions: Vec<EnumDefinition>,
-    input_object_type_definitions: Vec<InputObjectDefinition>,
+    pub scalar_type_definitions: Vec<ScalarDefinition>,
+    pub object_type_definitions: Vec<ObjectDefinition>,
+    pub interface_type_definitions: Vec<InterfaceDefinition>,
+    pub union_type_definitions: Vec<UnionDefinition>,
+    pub enum_type_definitions: Vec<EnumDefinition>,
+    pub input_object_type_definitions: Vec<InputObjectDefinition>,
     // DirectiveDefs
-    directive_definitions: Vec<DirectiveDefinition>,
+    pub directive_definitions: Vec<DirectiveDefinition>,
 }
 
 impl Document {
