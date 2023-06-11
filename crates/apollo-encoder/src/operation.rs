@@ -53,14 +53,14 @@ use crate::{Directive, SelectionSet, VariableDefinition};
 /// ```
 #[derive(Debug, Clone)]
 pub struct OperationDefinition {
-    operation_type: OperationType,
-    name: Option<String>,
-    variable_definitions: Vec<VariableDefinition>,
-    directives: Vec<Directive>,
-    selection_set: SelectionSet,
+    pub operation_type: OperationType,
+    pub name: Option<String>,
+    pub variable_definitions: Vec<VariableDefinition>,
+    pub directives: Vec<Directive>,
+    pub selection_set: SelectionSet,
     /// If a document contains only one operation and that operation is a query which defines no variables and
     /// contains no directives then that operation may be represented in a short-hand form which omits the query keyword and operation name.
-    shorthand: bool,
+    pub shorthand: bool,
 }
 
 impl OperationDefinition {
