@@ -36,7 +36,7 @@ use crate::{Field, FragmentSpread, InlineFragment};
 /// ```
 #[derive(Debug, PartialEq, Clone, Default)]
 pub struct SelectionSet {
-    selections: Vec<Selection>,
+    pub selections: Vec<Selection>,
 }
 
 impl SelectionSet {
