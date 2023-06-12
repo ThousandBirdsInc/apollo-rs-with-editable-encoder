@@ -119,14 +119,14 @@ impl fmt::Display for FieldDefinition {
 #[derive(Debug, PartialEq, Clone)]
 pub struct Field {
     // Alias must be a String.
-    alias: Option<String>,
+    pub alias: Option<String>,
     // Name must return a String.
-    name: String,
+    pub name: String,
     // Args returns a List of Argument representing the arguments this field accepts.
-    args: Vec<Argument>,
+    pub args: Vec<Argument>,
     /// Contains all directives.
-    directives: Vec<Directive>,
-    selection_set: Option<SelectionSet>,
+    pub directives: Vec<Directive>,
+    pub selection_set: Option<SelectionSet>,
 }
 
 impl Field {
