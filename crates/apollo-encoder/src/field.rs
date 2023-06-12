@@ -38,15 +38,15 @@ use crate::{
 #[derive(Debug, PartialEq, Clone)]
 pub struct FieldDefinition {
     // Name must return a String.
-    name: String,
+    pub name: String,
     // Description may return a String.
-    description: Option<StringValue>,
+    pub description: Option<StringValue>,
     // Args returns a List of __InputValue representing the arguments this field accepts.
-    args: ArgumentsDefinition,
+    pub args: ArgumentsDefinition,
     // Type must return a __Type that represents the type of value returned by this field.
-    type_: Type_,
+    pub type_: Type_,
     /// Contains all directives.
-    directives: Vec<Directive>,
+    pub directives: Vec<Directive>,
 }
 
 impl FieldDefinition {
